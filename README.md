@@ -205,6 +205,22 @@ stream.end();
 
 <!-- /.examples -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/streams/node/join`][@stdlib/streams/node/join]: transform stream which joins streamed data.
+
+</section>
+
+<!-- /.related -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
 
 <section class="main-repo" >
 
@@ -269,6 +285,12 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [string-split]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
 [regexp]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+
+<!-- <related-links> -->
+
+[@stdlib/streams/node/join]: https://github.com/stdlib-js/streams-node-join
+
+<!-- </related-links> -->
 
 </section>
 
