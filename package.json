@@ -1,0 +1,41 @@
+{
+  "name": "@stdlib/streams-node-split",
+  "version": "0.0.0",
+  "description": "Transform stream which splits streamed data.",
+  "license": "Apache-2.0",
+  "main": "./bundle.js",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/streams-node-split.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "utilities",
+    "utility",
+    "utils",
+    "util",
+    "stream",
+    "streams",
+    "writable",
+    "readable",
+    "duplex",
+    "transform",
+    "newline",
+    "delimited",
+    "delimiter",
+    "crlf",
+    "lf",
+    "split",
+    "splits",
+    "lines",
+    "line-by-line"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
