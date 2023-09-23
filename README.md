@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import splitStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@deno/mod.js';
+import splitStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@v0.1.0-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory, objectMode } from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@deno/mod.js';
+import { factory, objectMode } from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@v0.1.0-deno/mod.js';
 ```
 
 <a name="split-stream"></a>
@@ -177,7 +177,7 @@ This method accepts the same `options` as [`splitStream()`](#split-stream); howe
 ```javascript
 import transformStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-transform@deno/mod.js';
 import stdout from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-stdout@deno/mod.js';
-import splitStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@deno/mod.js';
+import splitStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@v0.1.0-deno/mod.js';
 
 function append( chunk, enc, clbk ) {
     clbk( null, chunk.toString()+'\n' );
