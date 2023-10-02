@@ -35,25 +35,30 @@ limitations under the License.
 
 > [Transform stream][transform-stream] which splits streamed data.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/streams-node-split
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import splitStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/streams-node-split/tags). For example,
-
-```javascript
-import splitStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@v0.1.0-esm/index.mjs';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { factory, objectMode } from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@esm/index.mjs';
+var splitStream = require( '@stdlib/streams-node-split' );
 ```
 
 <a name="split-stream"></a>
@@ -63,7 +68,7 @@ import { factory, objectMode } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strea
 Creates a [transform stream][transform-stream] which splits streamed data.
 
 ```javascript
-import stdout from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-stdout@esm/index.mjs';
+var stdout = require( '@stdlib/streams-node-stdout' );
 
 var stream = splitStream();
 
@@ -128,7 +133,7 @@ This method accepts the same `options` as [`splitStream()`](#split-stream).
 This method is a convenience function to create [streams][stream] which always operate in [objectMode][object-mode].
 
 ```javascript
-import stdout from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-stdout@esm/index.mjs';
+var stdout = require( '@stdlib/streams-node-stdout' );
 
 var stream = splitStream.objectMode({
     'sep': ','
@@ -155,7 +160,7 @@ This method accepts the same `options` as [`splitStream()`](#split-stream); howe
 -   Similar to [`String#split`][string-split], a separator which is a [regular expression][regexp] containing a matching group will result in the separator being retained in the output stream.
 
     ```javascript
-    import stdout from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-stdout@esm/index.mjs';
+    var stdout = require( '@stdlib/streams-node-stdout' );
 
     var stream = splitStream({
         'sep': /(,)/
@@ -179,15 +184,10 @@ This method accepts the same `options` as [`splitStream()`](#split-stream); howe
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import transformStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-transform@esm/index.mjs';
-import stdout from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-stdout@esm/index.mjs';
-import splitStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@esm/index.mjs';
+```javascript
+var transformStream = require( '@stdlib/streams-node-transform' );
+var stdout = require( '@stdlib/streams-node-stdout' );
+var splitStream = require( '@stdlib/streams-node-split' );
 
 function append( chunk, enc, clbk ) {
     clbk( null, chunk.toString()+'\n' );
@@ -218,10 +218,6 @@ for ( i = 0; i < 10; i++ ) {
     stream.write( i+'\t', 'utf8' );
 }
 stream.end();
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -251,7 +247,7 @@ stream.end();
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -281,8 +277,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/streams-node-split.svg
 [npm-url]: https://npmjs.org/package/@stdlib/streams-node-split
 
-[test-image]: https://github.com/stdlib-js/streams-node-split/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/streams-node-split/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/streams-node-split/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/streams-node-split/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/streams-node-split/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/streams-node-split?branch=main
@@ -323,7 +319,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/streams/node/join]: https://github.com/stdlib-js/streams-node-join/tree/esm
+[@stdlib/streams/node/join]: https://github.com/stdlib-js/streams-node-join
 
 <!-- </related-links> -->
 
