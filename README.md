@@ -35,30 +35,38 @@ limitations under the License.
 
 > [Transform stream][transform-stream] which splits streamed data.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/streams-node-split
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var splitStream = require( '@stdlib/streams-node-split' );
+splitStream = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var splitStream = require( 'path/to/vendor/umd/streams-node-split/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.splitStream;
+})();
+</script>
 ```
 
 <a name="split-stream"></a>
@@ -184,10 +192,15 @@ This method accepts the same `options` as [`splitStream()`](#split-stream); howe
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var transformStream = require( '@stdlib/streams-node-transform' );
-var stdout = require( '@stdlib/streams-node-stdout' );
-var splitStream = require( '@stdlib/streams-node-split' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-transform@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-stdout@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 function append( chunk, enc, clbk ) {
     clbk( null, chunk.toString()+'\n' );
@@ -218,6 +231,11 @@ for ( i = 0; i < 10; i++ ) {
     stream.write( i+'\t', 'utf8' );
 }
 stream.end();
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -319,7 +337,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/streams/node/join]: https://github.com/stdlib-js/streams-node-join
+[@stdlib/streams/node/join]: https://github.com/stdlib-js/streams-node-join/tree/umd
 
 <!-- </related-links> -->
 
