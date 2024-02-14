@@ -42,13 +42,18 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import splitStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/streams-node-split/tags). For example,
+
+```javascript
 import splitStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@v0.2.0-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory, objectMode } from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@v0.2.0-esm/index.mjs';
+import { factory, objectMode } from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@esm/index.mjs';
 ```
 
 <a name="split-stream"></a>
@@ -182,7 +187,7 @@ This method accepts the same `options` as [`splitStream()`](#split-stream); howe
 
 import transformStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-transform@esm/index.mjs';
 import stdout from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-stdout@esm/index.mjs';
-import splitStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@v0.2.0-esm/index.mjs';
+import splitStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@esm/index.mjs';
 
 function append( chunk, enc, clbk ) {
     clbk( null, chunk.toString()+'\n' );
