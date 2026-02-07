@@ -44,7 +44,7 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
-splitStream = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@umd/browser.js' )
+splitStream = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@v0.2.3-umd/browser.js' )
 ```
 
 To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
@@ -56,7 +56,7 @@ var splitStream = require( 'path/to/vendor/umd/streams-node-split/index.js' )
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@v0.2.3-umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -198,7 +198,7 @@ This method accepts the same `options` as [`splitStream()`](#split-stream); howe
 <body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-transform@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-stdout@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-split@v0.2.3-umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
